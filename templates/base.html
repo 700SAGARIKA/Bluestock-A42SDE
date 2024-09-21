@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style type="text/css">
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+    line-height: 1.2;
+    letter-spacing: 0.05rem;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: auto;
+    padding: 60px 15%;
+    justify-content: center;
+}
+
+ul{
+    list-style: none;
+}
+
+.footer-col{
+    width: 20%;
+}
+
+.footer-col h4{
+    position: relative;
+    margin-bottom: 25px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    color: rgba(45, 58, 76, 1);
+    text-transform: capitalize;
+}
+
+
+ul li:not(:last-child){
+    margin-bottom: 8px;
+}
+
+ul li a{
+    display: block;
+    font-size: 13px;
+    text-transform: capitalize;
+    color: rgba(102,115,132,1);
+    text-decoration: none;
+    transition: 0.2s;
+    line-height: 20px; 
+}
+
+ul li a:hover{
+    color: rgba(45,58,76,1);
+    font-size: 14px ;
+}
+
+.links a{
+    display: inline-block;
+    height: 35px;
+    width: 35px;
+    color: white;
+    background-color: rgba(0,120,255,1);
+    margin: 0 8px 8px 0;
+    text-align: center ;
+    line-height: 38px;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+.links a:hover{
+    color: rgba(0,120,255,1);
+    background-color: white;
+    font-size: 20px;
+}
+
+.footer-col1{
+   padding-top: 50px; 
+   float: left;
+}
+
+@media(max-width: 740px){
+    .footer-col{
+        width: 50%;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .footer-col h4::before{
+        all: unset;
+    }
+}
+
+@media(max-width: 555px){
+    .footer-col{
+        width: 100%;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <footer>
+        <div class="footer-col">
+            <h4>Resources</h4>
+            <ul>
+                <li><a href="#">Trading View</a></li>
+                <li><a href="#">NSE Holidays</a></li>
+                <li><a href="#">E-Voting CDSL</a></li>
+                <li><a href="#">E-Voting NSDL</a></li>
+                <li><a href="#">Market Timings</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Company</h4>
+            <ul>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Community</a></li>
+                <li><a href="#">Blogs</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Offerings</h4>
+            <ul>
+                <li><a href="#">Compare Broker</a></li>
+                <li><a href="#">Fin Calculators</a></li>
+                <li><a href="#">IPO</a></li>
+                <li><a href="#">All Brokers</a></li>
+                <li><a href="products">Products</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Links</h4>
+            <ul>
+                <li><a href="#">Shark Investor</a></li>
+                <li><a href="#">Mutual Funds</a></li>
+                <li><a href="#">Sitemap</a></li>
+                <li><a href="#">Indian Indices</a></li>
+                <li><a href="#">Bug Bounty Program</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Policy</h4>
+            <ul>
+                <li><a href="#">Terms & Conditions</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Refund Policy</a></li>
+                <li><a href="#">Disclaimers</a></li>
+                <li><a href="#">Trust & Security</a></li>
+            </ul>
+        </div>
+        <div class="footer-col1">
+            <div class="links">
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-telegram"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

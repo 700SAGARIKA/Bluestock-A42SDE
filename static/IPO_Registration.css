@@ -1,0 +1,80 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+nav.navbar {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand img {
+    border: 2px solid #ececec;
+    padding: 5px;
+}
+
+.navbar .form-control {
+    border-radius: 50px;
+    background-color: #f7f7fc;
+}
+
+.navbar .btn {
+    border-radius: 50px;
+}
+
+.sidebar {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    background-color: #f8f9fa;
+}
+
+.sidebar .nav-link {
+    color: #333;
+    font-weight: 500;
+}
+
+.sidebar .nav-link:hover,
+.sidebar .nav-link.active {
+    color: #007bff;
+    background-color: #f7f7fc;
+    border-radius: 5px;
+}
+
+.container-fluid {
+    margin-left: 16.6667%; /* Offset main content based on sidebar's width (2 columns out of 12) */
+}
+
+.dashboard-box {
+    padding: 20px;
+    background-color: #f7f7fc;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.dashboard-box h4 {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.dashboard-box p {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-radius: 25px;
+}
+
+.pagination .page-link {
+    color: #007bff;
+}
+
+.pagination .page-link:hover {
+    background-color: #f7f7fc;
+}
+

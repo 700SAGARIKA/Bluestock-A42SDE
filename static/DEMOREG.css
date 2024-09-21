@@ -1,0 +1,75 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+nav.navbar {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand img {
+    border: 2px solid #ececec;
+    padding: 5px;
+}
+
+.navbar .form-control {
+    border-radius: 50px;
+    background-color: #f7f7fc;
+}
+
+.navbar .btn {
+    border-radius: 50px;
+}
+
+aside {
+    border-right: 1px solid #ececec;
+}
+
+aside h5 {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+aside ul.nav .nav-item .nav-link {
+    color: #333;
+    font-weight: 500;
+}
+
+aside ul.nav .nav-item .nav-link:hover,
+aside ul.nav .nav-item .nav-link.active {
+    color: #007bff;
+    background-color: #f7f7fc;
+    border-radius: 5px;
+}
+
+main h2 {
+    font-size: 1.75rem;
+    font-weight: 600;
+}
+
+main .btn-primary {
+    border-radius: 25px;
+    background-color: #007bff;
+}
+
+main .btn-outline-secondary {
+    border-radius: 25px;
+    color: #007bff;
+    border-color: #007bff;
+}
+
+main .card {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+main .card-header {
+    background-color: #f7f7fc;
+    font-weight: bold;
+}
+
+main .form-control {
+    border-radius: 5px;
+}
+
+main .form-select {
+    border-radius: 5px;
+}

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPO Information</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="DEMOREG.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="Logo bf.png" alt="Logo" width="70" height="40" class="d-inline-block align-text-top">
+                Bluestock Fintech
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <form class="d-flex ms-auto">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                </form>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Hi, Vishal
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Profile</a></li>
+                            <li><a class="dropdown-item" href="#">Logout</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="bi bi-bell"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-md-2 bg-light sidebar">
+                <h5 class="my-4">MENU</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Manage IPO</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">IPO Subscription</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">IPO Allotment</a>
+                    </li>
+                    <h5 class="my-4">OTHERS</h5>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Settings</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">API Manager</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Accounts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Help</a>
+                    </li>
+                </ul>
+            </div>
+            
+
+            <!-- Main Content -->
+            <div class="col-md-10">
+                <div class="d-flex justify-content-between align-items-center my-4">
+                    <h2>Upcomming IPO Information</h2>
+                   <div>
+                        <button class="btn btn-primary">Register</button>
+                        <button class="btn btn-outline-secondary">Cancel</button>
+                    </div>
+                </div>
+
+                <!-- IPO Information Card -->
+                <div class="card mb-4">
+                    <div class="card-header">
+                        IPO Information
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <!-- Company Logo -->
+                            <div class="mb-3">
+                                <label for="companyLogo" class="form-label">Company Logo</label>
+                                <div class="d-flex align-items-center">
+                                    <img src="company logo.png" alt="Company Logo" width="50" height="50"
+                                        class="me-3">
+                                    <div>
+                                        <button class="btn btn-primary btn-sm">Upload Logo</button>
+                                        <button class="btn btn-danger btn-sm">Delete</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Form Fields -->
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="companyName" class="form-label">Company Name</label>
+                                    <input type="text" class="form-control" id="companyName" value="Vodafone Idea">
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="priceBand" class="form-label">Price Band</label>
+                                    <input type="text" class="form-control" id="priceBand" value="Not Issued">
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="open" class="form-label">Open</label>
+                                    <input type="text" class="form-control" id="open" value="Not Issued">
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="close" class="form-label">Close</label>
+                                    <input type="text" class="form-control" id="close" value="Not Issued">
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="issueSize" class="form-label">Issue Size</label>
+                                    <input type="text" class="form-control" id="issueSize" value="2300 Cr.">
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="issueType" class="form-label">Issue Type</label>
+                                    <select class="form-select" id="issueType">
+                                        <option value="Not Issued" selected>Not Issued</option>
+                                        <option value="Fixed Price">Fixed Price</option>
+                                        <option value="Book Building">Book Building</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="listingDate" class="form-label">Listing Date</label>
+                                    <input type="text" class="form-control" id="listingDate" value="Not Issued">
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="status" class="form-label">Status</label>
+                                    <input type="text" class="form-control" id="status" value="Not Issued">
+                                </div>
+                            </div>
+
+                            <!-- New Listed IPO Details -->
+                            <h5 class="my-3">New Listed IPO Details (When IPO Get Listed)</h5>
+                            <div class="row">
+                                <div class="col-md-4 mb-3">
+                                    <label for="ipoPrice" class="form-label">IPO Price</label>
+                                    <input type="text" class="form-control" id="ipoPrice" value="₹ 383">
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <label for="listingPrice" class="form-label">Listing Price</label>
+                                    <input type="text" class="form-control" id="listingPrice" value="₹ 435">
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <label for="listingGain" class="form-label">Listing Gain</label>
+                                    <input type="text" class="form-control" id="listingGain" value="13.58%">
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <label for="cmp" class="form-label">CMP</label>
+                                    <input type="text" class="form-control" id="cmp" value="₹410">
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <label for="currentReturn" class="form-label">Current Return</label>
+                                    <input type="text" class="form-control" id="currentReturn" value="7.05%">
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <label for="listingDateNew" class="form-label">Listing Date</label>
+                                    <input type="text" class="form-control" id="listingDateNew" value="2024-05-30">
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="rhp" class="form-label">RHP</label>
+                                    <input type="text" class="form-control" id="rhp" placeholder="Enter RHP PDF Link">
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="drhp" class="form-label">DRHP</label>
+                                    <input type="text" class="form-control" id="drhp" placeholder="Enter DRHP PDF Link">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

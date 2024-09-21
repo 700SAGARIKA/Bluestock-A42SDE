@@ -1,0 +1,299 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 10px 20px;
+    border-bottom: 2px solid #E1E1E1;
+}
+
+.navbar-logo {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-logo img {
+    height: 30px;
+    margin-right: 10px;
+}
+
+.navbar-logo span {
+    font-size: 20px;
+    font-weight: bold;
+    color: #000;
+}
+
+.navbar-menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+
+}
+
+.navbar-menu li {
+    margin: 0 15px;
+    position: relative;
+    color: #000;
+}
+
+.navbar-menu a {
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+}
+
+.navbar-menu .new-tag {
+    color: #0066FF;
+    font-weight: bold;
+    position: relative;
+}
+
+.navbar-menu .new-tag::after {
+    content: "NEW";
+    position: absolute;
+    top: -8px;
+    right: -30px;
+    background-color: #0066FF;
+    color: white;
+    font-size: 10px;
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.sign-in {
+    color: #861717;
+    text-decoration: none;
+    margin-right: 15px;
+    font-size: 14px;
+}
+
+.sign-up {
+    background-color: #0066FF;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+#sign-up {
+    color: #fefefe;
+}
+
+
+.menu-icon {
+    font-size: 24px;
+    display: none;
+    cursor: pointer;
+}
+.technical-analysis-section {
+    padding: 20px;
+}
+
+.breadcrumb {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.breadcrumb a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.breadcrumb span {
+    color: #000;
+}
+
+/* Technical Analysis Section */
+.technical-analysis-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #D9D9D9;
+    padding: 40px;
+    border-radius: 8px;
+}
+
+.technical-analysis-content h1 {
+    font-size: 48px;
+    color: #000;
+    margin: 0;
+}
+
+.placeholder-box {
+    width: 250px;
+    height: 250px;
+    background-color: #f8d7da;
+    border-radius: 8px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .technical-analysis-content {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    .technical-analysis-content h1 {
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+
+    .placeholder-box {
+        width: 100%;
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .technical-analysis-content h1 {
+        font-size: 28px;
+    }
+
+    .placeholder-box {
+        height: 150px;
+    }
+}
+/* Cards Section */
+.cards-section {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: white;
+    border: 1px solid #f0f0f0;
+    border-radius: 12px;
+    padding: 20px;
+    width: 30%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.card img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    font-size: 20px;
+    margin: 10px 0;
+    color: #333;
+}
+
+.card p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    color: #777;
+}
+
+.card-footer a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+/* Card hover effect */
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+    .card {
+        width: 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 100%;
+    }
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .navbar-menu, .navbar-buttons {
+        display: none;
+    }
+    .menu-icon {
+        display: block;
+    }
+    .navbar {
+        justify-content: space-between; /* Ensure proper spacing on mobile */
+    }
+    .navbar-menu.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+    }
+    .navbar-menu li {
+        width: 100%;
+        text-align: center;
+        margin: 0;
+    }
+    .navbar-menu a {
+        padding: 15px 0;
+        width: 100%;
+        display: block;
+    }
+    .dropdown-content {
+        position: static;
+        box-shadow: none;
+    }
+    .dropdown:hover .dropdown-content {
+        display: block;
+        position: relative;
+    }
+}

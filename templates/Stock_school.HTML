@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blue Stock</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style type="text/css">
+        * {
+            text-decoration: none;
+            background: none;
+            font-family: "Poppins", sans-serif;
+            color: rgba(154, 154, 154, 1);
+            letter-spacing: 0.5px;
+        }
+
+        .navbar {
+            padding-left: 2%;
+            padding-right: 2%;
+        }
+
+        .navdiv {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo img {
+            width: 85px;
+            height: 45px;
+            left: 86px;
+            top: 37px;
+        }
+
+        .logo a {
+            color: rgba(82, 51, 170, 255);
+            font-size: 45px;
+            font-weight: 700;
+            width: 299.68px;
+            height: 68px;
+            left: 196px;
+            top: 27px;
+            line-height: 67.5px;
+            display: flex;
+            align-items: center;
+        }
+
+        li {
+            list-style: none;
+            display: inline-block;
+        }
+
+        .navdiv li a {
+            color: rgba(154, 154, 154, 1);
+            font-size: 13px;
+            font-weight: bold;
+            margin-right: 35px;
+        }
+
+        button {
+            border: none;
+            outline: none;
+            background: rgba(63, 82, 255, 1);
+            padding: 10px;
+            margin-left: 2px;
+            border-radius: 10px;
+        }
+
+        button a {
+            color: white;
+            font-weight: bold;
+            font-size: 15px;
+            line-height: 22.5px;
+            font-weight: 600;
+            width: 108.25px;
+            height: 23px;
+            top: 44px;
+            left: 1642px;
+        }
+
+        .breadcrumb li {
+            display: inline-block;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 24px;
+            color: blue;
+        }
+
+        .breadcrumb li::after {
+            content: "   >   ";
+        }
+
+        .breadcrumb li:last-child::after {
+            content: "";
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            /* margin-top: 100px; */
+            border-radius: 1px;
+        }
+
+        .card {
+            width: 450px;
+            height: 210px;
+            border: 2.5px solid transparent;
+            border-image: linear-gradient(180deg, rgba(41, 181, 172, 0.38) 0%, rgba(255, 132, 235, 0.5) 50%, rgba(255, 198, 131, 0.79) 100%);
+            border-image-slice: 1;
+            background-clip: border-box;
+            margin: 15px;
+            border-radius: 15px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+            flex-direction: column;
+            font-size: 15px;
+        }
+
+        .card img {
+            max-width: 90px;
+            height: 80px;
+            padding-top: 55px;
+            padding-bottom: 65px;
+            margin-right: 25px;
+            padding-left: 25px;
+            float: left;
+        }
+
+        /* .footer {
+            position: relative;
+        }
+
+        .image-container {
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .image-container img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: auto;
+        } */
+
+
+        /*         
+        .card-content h4{
+            font-size: 20px;
+            color: black;
+            margin-bottom:8px;
+        }
+        .card-content p{
+            font-size: 10px;
+            color: rgba(0, 0, 0, 1);
+            line-height: 24px;
+        } */
+        .card-content text {
+            color: black;
+        }
+
+        .page-content {
+            padding-top: 30px;
+            padding-left: 50px;
+        }
+
+        .page-content h2 {
+            color: black;
+        }
+
+        .page-content p {
+            color: black;
+        }
+
+        section {
+            padding: 10px 13% 10px;
+        }
+
+        .footer {
+            height: 350px;
+            border: 2.5px solid transparent;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+            border-radius: 22px 22px 22px 22px;
+            background: rgba(63, 91, 217, 1);
+            overflow: hidden;
+            /* Hide overflow to crop image */
+            position: relative;
+            /* Ensure positioning context for absolute children */
+        }
+
+        .footer img {
+            position: absolute;
+            /* Position image absolutely */
+            bottom: 50;
+            /* Align to the bottom of the container */
+            left: 50;
+            /* Align to the left of the container */
+            width: 25%;
+            /* Stretch to full width of the container */
+            height: auto;
+            /* Maintain aspect ratio */
+            object-fit: cover;
+            /* Crop image to cover the container */
+            object-position: top;
+            /* Align image to the top of the container */
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+            gap: 2px;
+            position: relative;
+            /* Ensure it is above the image if needed */
+        }
+
+        */
+        .footer-content downloads {
+            float: left;
+        }
+
+        */ .input {
+            max-width: 658px;
+            height: 73px;
+            position: relative;
+        }
+
+        .mailinput {
+            flex: 1;
+            border: none;
+            outline: none;
+            padding: 5px;
+            font-size: 14px;
+            background-color: rgba(255, 255, 255, 1);
+            border-radius: 10px;
+        }
+
+        .send-button {
+            border: none;
+            outline: none;
+            background-color: rgba(46, 81, 255, 1);
+            color: rgba(255, 255, 255, 1);
+            padding: 10px 10px;
+            height: 35%;
+            border-radius: 10px;
+            position: absolute;
+            padding-top: 5px;
+            right: 0;
+        }
+
+        .searchbox-wrap {
+            display: flex;
+            width: 500px;
+            margin-top: 8%;
+            margin-left: auto;
+            margin-right: auto;
+
+
+            input {
+                flex: 1;
+                padding: 30px 20px;
+                font-size: 1.1em;
+
+                -webkit-border-top-left-radius: 25px;
+                -webkit-border-bottom-left-radius: 25px;
+                -moz-border-radius-topleft: 25px;
+                -moz-border-radius-bottomleft: 25px;
+                border-top-left-radius: 25px;
+                border-bottom-left-radius: 25px;
+                box-shadow: none;
+                border: none;
+                box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.19);
+
+            }
+
+            button {
+                padding-right: 10px;
+
+                background-color: #FFF;
+                -webkit-border-top-right-radius: 25px;
+                -webkit-border-bottom-right-radius: 25px;
+                -moz-border-radius-topright: 25px;
+                -moz-border-radius-bottomright: 25px;
+                border-top-right-radius: 25px;
+                border-bottom-right-radius: 25px;
+                box-shadow: 5px 4px 6px rgba(0, 0, 0, 0.19);
+                border: none;
+                cursor: pointer;
+                cursor: hand;
+
+                span {
+                    margin-left: 50px;
+                    padding: 24px 45px;
+
+                    font-size: 0.9em;
+                    text-transform: uppercase;
+                    font-weight: 300;
+                    color: #FFF;
+                    background-color: #F54E59;
+
+                    border-radius: 20px;
+                    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.19);
+
+                    &:hover {
+                        background-color: #D6121F;
+                        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.19);
+                    }
+
+                }
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navdiv">
+            <div class="logo">
+                <a href="#"><img src="/static/images/bluestock logo.png" ;>BLUESTOCK</a>
+            </div>
+            <ul>
+                <li> <a href="#">IPO</a></li>
+                <li> <a href="#">COMMUNITY</a></li>
+                <li> <a href="#">PRODUCTS</a></li>
+                <li> <a href="#">BROKERS <i style="rotate: 41.19deg;" class="fa-solid fa-arrow-up"></i></a></li>
+                <li> <a href="#">LIVE NEWS</a></li>
+                <button><a href="#">Sign In</a></button>
+                <button><a href="#">Sign Up Now</a></button>
+                <i style="color: black; padding-left: 10px;font-size: 20px;" class="fa-solid fa-grip-vertical"></i>
+            </ul>
+        </div>
+    </nav>
+    <div id="container">
+        <ol class="breadcrumb">
+            <li><a href="#">Home</a></li>
+            <li>Stock School</li>
+        </ol>
+    </div>
+    <div class="page-content">
+        <h2>Categories</h2>
+        <p>Begin your financial market education by exploring a variety of categories.</p>
+    </div>
+    <div class="container">
+        <div class="card">
+            <img src="/static/images/basic finance.png">
+            <div class="card-content">
+                <h3 style="color: black;">Basic Finance</h3>
+                <p style="color: black; font-size: 15px;">Learn to manage money, choose investments wisely, and achieve
+                    financia...</p>
+                <text style="font-weight: 500;" style="padding: 16px;"><i style="color: rgba(255, 115, 0, 1);"
+                        class="fa-solid fa-book"></i> 4 Modules</text>
+                <text style="margin-left: 80px; "><i style="color: rgba(255, 115, 0, 1);" class="fa-solid fa-eye"></i>
+                    504653 Views</text>
+            </div>
+            <hr style="width: 300px; 
+                    height: 0px;
+                    gap: 0px;
+                    border: 1px 0px 0px 0px;
+                    opacity: 0px;
+                    border-image-source: linear-gradient(180deg, #D9D9D9 0%, rgba(32, 29, 31, 0) 100%); 
+                    border-image-slice: 1;
+                    margin-top: 1.2em; margin-bottom: 1.2em;">
+            <a href="#" style="color: blue; margin-left: 190px;">View Details >></a>
+        </div>
+        <div class="card">
+            <img src="/static/images/beginners stock markets.png">
+            <div class="card-content">
+                <h3 style="color: black;">Beginners Stock Markets</h3>
+                <p style="color: black; font-size: 15px;">Learn stock market terminologies, macroeconomic indicators,
+                    IPOs and c...</p>
+                <text style="font-weight: 500;" style="padding: 16px;"><i style="color: rgba(255, 115, 0, 1);"
+                        class="fa-solid fa-book"></i> 6 Modules</text>
+                <text style="margin-left: 80px; padding-bottom: 50px;"><i style="color: rgba(255, 115, 0, 1);"
+                        class="fa-solid fa-eye"></i> 392296 Views</text>
+            </div>
+            <hr style="width: 300px; 
+                height: 0px;
+                gap: 0px;
+                border: 1px 0px 0px 0px;
+                opacity: 0px;
+                border-image-source: linear-gradient(180deg, #D9D9D9 0%, rgba(32, 29, 31, 0) 100%); 
+                border-image-slice: 1;
+                margin-top: 1.2em; margin-bottom: 1.2em;">
+            <a href="#" style="color: blue; margin-left: 190px;">View Details >></a>
+        </div>
+        <div class="card">
+            <img src="/static/images/stock invesitng.png">
+            <div class="card-content">
+                <h3 style="color: black;">Stock Investing</h3>
+                <p style="color: black; font-size: 15px;">Explore stock investment basics, analysis, modelling and
+                    strategies</p>
+                <text style="font-weight: 500;" style="padding: 16px;"><i style="color: rgba(255, 115, 0, 1);"
+                        class="fa-solid fa-book"></i> 10 Modules</text>
+                <text style="margin-left: 80px; padding-bottom: 50px;"><i style="color: rgba(255, 115, 0, 1);"
+                        class="fa-solid fa-eye"></i> 300086 Views</text>
+            </div>
+            <hr style="width: 300px; 
+                height: 0px;
+                gap: 0px;
+                border: 1px 0px 0px 0px;
+                opacity: 0px;
+                border-image-source: linear-gradient(180deg, #D9D9D9 0%, rgba(32, 29, 31, 0) 100%); 
+                border-image-slice: 1;
+                margin-top: 1.2em; margin-bottom: 1.2em;">
+            <a href="#" style="color: blue; margin-left: 190px;">View Details >></a>
+        </div>
+        <div class="card">
+            <img src="/static/images/technical analysis.png">
+            <div class="card-content">
+                <h3 style="color: black;">Technical Analysis</h3>
+                <p style="color: black; font-size: 15px;">Explore basic to advanced topics for effective trading</p>
+                <text style="font-weight: 500;" style="padding: 16px;"><i style="color: rgba(255, 115, 0, 1);"
+                        class="fa-solid fa-book"></i> 13 Modules</text>
+                <text style="margin-left: 80px; padding-bottom: 50px;"><i style="color: rgba(255, 115, 0, 1);"
+                        class="fa-solid fa-eye"></i> 1113362 Views</text>
+            </div>
+            <hr style="width: 300px; 
+                height: 0px;
+                gap: 0px;
+                border: 1px 0px 0px 0px;
+                opacity: 0px;
+                border-image-source: linear-gradient(180deg, #D9D9D9 0%, rgba(32, 29, 31, 0) 100%); 
+                border-image-slice: 1;
+                margin-top: 1.2em; margin-bottom: 1.2em;">
+            <a href="#" style="color: blue; margin-left: 190px;">View Details >></a>
+        </div>
+        <div class="card">
+            <img src="/static/images/derivatives.png">
+            <div class="card-content">
+                <h3 style="color: black;">Derivatives</h3>
+                <p style="color: black; font-size: 15px;">Become familiar with the principles and strategies of
+                    derivatives trad...</p>
+                <text style="font-weight: 500;" style="padding: 16px;"><i style="color: rgba(255, 115, 0, 1);"
+                        class="fa-solid fa-book"></i> 4 Modules</text>
+                <text style="margin-left: 80px; padding-bottom: 50px;"><i style="color: rgba(255, 115, 0, 1);"
+                        class="fa-solid fa-eye"></i> 325175 Views</text>
+            </div>
+            <hr style="width: 300px; 
+                height: 0px;
+                gap: 0px;
+                border: 1px 0px 0px 0px;
+                opacity: 0px;
+                border-image-source: linear-gradient(180deg, #D9D9D9 0%, rgba(32, 29, 31, 0) 100%);
+                border-image-slice: 1;
+                margin-top: 1.2em; margin-bottom: 1.2em;">
+            <a href="#" style="color: blue; margin-left: 190px;">View Details >></a>
+        </div>
+        <div class="card">
+            <img src="/static/images/mutual funds.png">
+            <div class="card-content">
+                <h3 style="color: black;">Mutual Funds</h3>
+                <p style="color: black; font-size: 15px;">Learn important mutual fund concepts for effective financial
+                    planning</p>
+                <text style="font-weight: 500;" style="padding: 16px;"><i style="color: rgba(255, 115, 0, 1);"
+                        class="fa-solid fa-book"></i> 2 Modules</text>
+                <text style="margin-left: 80px; padding-bottom: 50px;"><i style="color: rgba(255, 115, 0, 1);"
+                        class="fa-solid fa-eye"></i> 71591 Views</text>
+            </div>
+            <hr style="width: 300px;
+                height: 0px;
+                gap: 0px;
+                border: 1px 0px 0px 0px;
+                opacity: 0px;
+                border-image-source: linear-gradient(180deg, #D9D9D9 0%, rgba(32, 29, 31, 0) 100%); 
+                border-image-slice: 1;
+                margin-top: 1.2em; margin-bottom: 1.2em;">
+            <a href="#" style="color: blue; margin-left: 190px;">View Details >></a>
+        </div>
+        <div class="card">
+            <img src="/static/images/banking & insurence.png">
+            <div class="card-content">
+                <h3 style="color: black;">Banking & Insurance</h3>
+                <p style="color: black; font-size: 15px;">Learn the basics of banking and insurance for sound financial
+                    manageme...</p>
+                <text style="font-weight: 500;" style="padding: 16px;"><i style="color: rgba(255, 115, 0, 1);"
+                        class="fa-solid fa-book"></i> 8 Modules</text>
+                <text style="margin-left: 80px; padding-bottom: 50px;"><i style="color: rgba(255, 115, 0, 1);"
+                        class="fa-solid fa-eye"></i> 207262 Views</text>
+            </div>
+            <hr style="width: 300px; 
+                height: 0px;
+                gap: 0px;
+                border: 1px 0px 0px 0px;
+                opacity: 0px;
+                border-image-source: linear-gradient(180deg, #D9D9D9 0%, rgba(32, 29, 31, 0) 100%); 
+                border-image-slice: 1;
+                margin-top: 1.2em; margin-bottom: 1.2em;">
+            <a href="#" style="color: blue; margin-left: 190px;">View Details >></a>
+        </div>
+        <div class="card">
+            <img src="/static/images/financial planning.png">
+            <div class="card-content">
+                <h3 style="color: black;">Financial Planning</h3>
+                <p style="color: black; font-size: 15px;">Learn about thorough financial planning strategies and
+                    services</p>
+                <text style="font-weight: 500;" style="padding: 16px;"><i style="color: rgba(255, 115, 0, 1);"
+                        class="fa-solid fa-book"></i> 8 Modules</text>
+                <text style="margin-left: 80px; padding-bottom: 50px;"><i style="color: rgba(255, 115, 0, 1);"
+                        class="fa-solid fa-eye"></i> 135885 Views</text>
+            </div>
+            <hr style="width: 300px; 
+                height: 0px;
+                gap: 0px;
+                border: 1px 0px 0px 0px;
+                opacity: 0px;
+                border-image-source: linear-gradient(180deg, #D9D9D9 0%, rgba(32, 29, 31, 0) 100%); 
+                border-image-slice: 1;
+                margin-top: 1.2em; margin-bottom: 1.2em;">
+            <a href="#" style="color: blue; margin-left: 190px;">View Details >></a>
+        </div>
+        <div class="card">
+            <img src="/static/images/cryptocurrency.png">
+            <div class="card-content">
+                <h3 style="color: black;">Cryptocurrency</h3>
+                <p style="color: black; font-size: 15px;">Gain insights into the world of cryptocurrencies and
+                    blockchain</p>
+                <text style="font-weight: 500;" style="padding: 16px;"><i style="color: rgba(255, 115, 0, 1);"
+                        class="fa-solid fa-book"></i> 2 Modules</text>
+                <text style="margin-left: 80px; padding-bottom: 50px;"><i style="color: rgba(255, 115, 0, 1);"
+                        class="fa-solid fa-eye"></i> 21728 Views</text>
+            </div>
+            <hr style="width: 300px; 
+                height: 0px;
+                gap: 0px;
+                border: 1px 0px 0px 0px;
+                opacity: 0px;
+                border-image-source: linear-gradient(180deg, #D9D9D9 0%, rgba(32, 29, 31, 0) 100%); 
+                border-image-slice: 1;
+                margin-top: 1.2em; margin-bottom: 1.2em;">
+            <a href="#" style="color: blue; margin-left: 190px;">View Details >></a>
+        </div>
+        <div class="card">
+            <img src="/static/images/alternative investments.png">
+            <div class="card-content">
+                <h3 style="color: black;">Alternative Investments</h3>
+                <p style="color: black; font-size: 15px;">Explore various alternative investments like debt, commodity,
+                    gold, cu...</p>
+                <text style="font-weight: 500;" style="padding: 16px;"><i style="color: rgba(255, 115, 0, 1);"
+                        class="fa-solid fa-book"></i> 6 Modules</text>
+                <text style="margin-left: 80px; padding-bottom: 50px;"><i style="color: rgba(255, 115, 0, 1);"
+                        class="fa-solid fa-eye"></i> 71183 Views</text>
+            </div>
+            <hr style="width: 300px; 
+                height: 0px;
+                gap: 0px;
+                border: 1px 0px 0px 0px;
+                opacity: 0px;
+                border-image-source: linear-gradient(180deg, #D9D9D9 0%, rgba(32, 29, 31, 0) 100%); 
+                border-image-slice: 1;
+                margin-top: 1.2em; margin-bottom: 1.2em;">
+            <a href="#" style="color: blue; margin-left: 190px;">View Details >></a>
+        </div>
+        <div class="card">
+            <img src="/static/images/book summary.png">
+            <div class="card-content">
+                <h3 style="color: black;">Book Summary</h3>
+                <p style="color: black; font-size: 15px;">Get summaries of popular finance books</p>
+                <text style="font-weight: 500;" style="padding: 16px;"><i style="color: rgba(255, 115, 0, 1);"
+                        class="fa-solid fa-book"></i> 37 Modules</text>
+                <text style="margin-left: 80px; padding-bottom: 50px;"><i style="color: rgba(255, 115, 0, 1);"
+                        class="fa-solid fa-eye"></i> 742586 Views</text>
+            </div>
+            <hr style="width: 300px; 
+                height: 0px;
+                gap: 0px;
+                border: 1px 0px 0px 0px;
+                opacity: 0px;
+                border-image-source: linear-gradient(180deg, #D9D9D9 0%, rgba(32, 29, 31, 0) 100%); 
+                border-image-slice: 1;
+                margin-top: 1.2em; margin-bottom: 1.2em;">
+            <a href="#" style="color: blue; margin-left: 190px;">View Details >></a>
+        </div>
+    </div>
+    <!-- <section class="footer">
+        <div class="footer-content">
+            <div class="image-container">
+                <img src="images/phone.png" alt="Phone">
+            </div>
+            <div class="downloads" style="margin-top: 5%; font-family: Poppins, sans-serif">
+                <h5 style="color:rgba(255, 201, 2, 1); letter-spacing: 1px; height: 5px; font-size: 34px;">4.4 K +</h5>
+                <div style="color:rgba(255, 201, 2, 1); letter-spacing: 1px; font-size: 30px;">Downloads</div>
+            </div>
+            <div class="links">
+                <h3 style="font-family: Poppins, sans-serif; color:rgba(255, 255, 255, 1); letter-spacing: 2px;">Enjoy
+                    Free Learning, Analytics Club</h3>
+                <p style="font-family: Poppins, sans-serif; color:rgba(255, 255, 255, 1); font-size: smaller;">Get the
+                    link to download the App</p>
+                    <div class="input-container" style="display: flex; align-items: center;">
+                        <input type="text" placeholder="Search for something..."
+                            style="width: 20rem; height: 2.5rem; border-radius: 10px 0 0 10px; background: white; border: 1px solid #ddd; padding: 0 1rem; box-sizing: border-box;">
+                        <button style="height: 2.5rem; border-radius: 0 10px 10px 0; background: rgba(255, 201, 2, 1); color: white; border: none; padding: 0 1rem; margin-left: -1px; box-sizing: border-box;">Send</button>
+                    </div>
+                    
+                <div class="pics" style="margin-top: 1rem;">
+                    <img style="float: left; max-width: 147px; height: 147px; border-radius: 1.5rem;" src="images/QR code.png" alt="QR Code">
+                    <div style="float: right; display: flex; flex-direction: column;">
+                        <img style="max-width: 182px; height: 48px; margin-bottom: 0.5rem;" src="images/google play img.jpeg" alt="Google Play">
+                        <img style="max-width: 182px; height: 48px;" src="images/ios.jpeg" alt="iOS">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    
+    <section class="footer">
+        <div class="footer-content">
+            <div class="image-container">
+                <img src="/static/images/phone.png" alt="Phone">
+            </div>
+            <div style="margin-top: 5%; font-family: Poppins, sans-serif">
+                <h5 style="color:rgba(255, 201, 2, 1); letter-spacing: 1px; height: 5px; font-size: 34px;">4.4 K +</h5>
+                <div style="color:rgba(255, 201, 2, 1); letter-spacing: 1px; font-size: 30px;">Downloads</div>
+            </div>
+            <div class="links">
+                <h3 style="font-family: Poppins, sans-serif; color:rgba(255, 255, 255, 1); letter-spacing: 2px;">Enjoy
+                    Free Learning, Analytics Club</h3>
+                <p style="font-family: Poppins, sans-serif; color:rgba(255, 255, 255, 1); font-size: smaller;">Get the
+                    link to download the App</p>
+                <div class="input-container" style="display: flex; align-items: center;">
+                    <input type="text" placeholder="Enter your mobile number..."
+                        style="width: 20rem; height: 2.5rem; border-radius: 10px 0 0 10px; background: white; border: 1px solid #ddd; box-sizing: border-box; padding: 0 1rem;">
+                    <button style="height: 2.5rem; border-radius: 0 10px 10px 0; background: rgb(45, 19, 190); color: white; border: none; padding: 0 1rem; margin-left: -1px;">Send App Link</button>
+                </div>
+                <div class="pics" style="display: flex; align-items: normal; margin-top: 1rem;">
+                    <img style="max-width: 147px; height: 147px; margin-right: 1rem;" src="/static/images/QR code.png" alt="QR Code">
+                    <div style="display: contents; flex-direction: column;">
+                        <img style="max-width: 182px; height: 48px;margin-left: 15%; margin-bottom: 0.5rem;" src="/static/images/google play img.jpeg" alt="Google Play">
+                        <img style="max-width: 182px; height: 48px; margin-top: 5%; margin-left: 15%;" src="/static/images/ios.jpeg" alt="iOS">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>

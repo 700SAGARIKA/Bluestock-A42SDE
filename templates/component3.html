@@ -1,0 +1,374 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Broker Compare</title>
+    <link rel="stylesheet" href="/static/component3.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <img src="/static/Assets/logo.png" alt="Bluestock Logo">
+            <span>BLUESTOCK</span>
+        </div>
+        <div class="menu-icon" onclick="toggleMenu()">&#x2630;</div> <!-- Hamburger icon -->
+        <ul class="navbar-menu" id="navbarMenu">
+            <li><a href="#">PRODUCTS</a></li>
+            <li><a href="#">COMMUNITY</a></li>
+            <li class="dropdown">
+                <a href="#">MEDIA</a>
+                <div class="dropdown-content">
+                    <a href="#">Submenu 1</a>
+                    <a href="#">Submenu 2</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#">BROKERS</a>
+                <div class="dropdown-content">
+                    <a href="#">Submenu 1</a>
+                    <a href="#">Submenu 2</a>
+                </div>
+            </li>
+            <li><a href="#" class="new-tag" id="new-tag">LIVE NEWS</a></li>
+            <li><a href="#" class="sign-in">Sign In</a></li>
+            <li><a href="#" class="sign-up" id="sign-up">Sign Up Now</a></li>
+        </ul>
+    </nav>
+
+    <!-- now new section -->
+    <section class="comparison-section">
+        <div class="sidebar">
+            <ul>
+                <a href="#graph">
+                    <li><img src="/static/Assets/pie chart.png" alt="Active Clients Icon" class="sidebar-icon"> Active Clients
+                    </li>
+                </a>
+                <a href="#AccountOpeningandMaintenanceChargestable">
+                    <li><img src="/static/Assets/charges.png" alt="Charges Icon" class="sidebar-icon"> Charges</li>
+                </a>
+                <a href="#complaints">
+                    <li><img src="/static/Assets/complaints.png" alt="Complaints Icon" class="sidebar-icon"> Complaints</li>
+                </a>
+                <a href="#ShareHolding">
+                    <li><img src="/static/Assets/coin in hand.png" alt="Share Holding Icon" class="sidebar-icon"> Share Holding
+                    </li>
+                </a>
+                <a href="#Prosandcons">
+                    <li><img src="/static/Assets/pros and cons.png" alt="Pros & Cons Icon" class="sidebar-icon"> Pros & Cons
+                    </li>
+                </a>
+                <a href="#Ratings">
+                    <li><img src="/static/Assets/percentage.png" alt="Ratings Icon" class="sidebar-icon"> Ratings</li>
+                </a>
+                <a href="#financials"><li><img src="/static/Assets/financials.png" alt="Financials Icon" class="sidebar-icon"> Financials</li></a>
+            </ul>
+        </div>
+        <div class="comparison-cards">
+            <div class="card">
+                <img src="/static/Assets/AngleOne.png" alt="Angel One">
+                <h3>Angel One</h3>
+                <div class="stars">
+                    <span>★★★★☆</span>
+                </div>
+                <div class="rating">4.7</div>
+                <button>Open Demat Account</button>
+            </div>
+            <div class="vs">
+                <span>vs</span>
+            </div>
+            <div class="card">
+                <img src="/static/Assets/zerodha-logo.png" alt="Zerodha">
+                <h3>Zerodha</h3>
+                <div class="stars">
+                    <span>★★★★☆</span>
+                </div>
+                <div class="rating">4.6</div>
+                <button>Open Demat Account</button>
+            </div>
+        </div>
+    </section>
+    <!-- graph -->
+    <div class="graph" id="graph">
+        <h2>Active Clients</h2>
+        <div class="chart-container">
+            <canvas id="activeClientsChart"></canvas>
+        </div>
+    </div>
+    <!-- Account Opening and Maintenance Charges table -->
+    <div class="accopeningandmaint" id="AccountOpeningandMaintenanceChargestable">
+        <h2>Account Opening and Maintenance Charges</h2>
+
+        <div class="AccountOpeningandMaintenanceChargestable">
+
+            <table>
+                <tr>
+                    <th>Charges</th>
+                    <th>Angel One</th>
+                    <th>Zerodha</th>
+                </tr>
+                <tr>
+                    <td>Account Opening Charges</td>
+                    <td>0</td>
+                    <td>200</td>
+                </tr>
+                <tr>
+                    <td>Account Maintenance Charges</td>
+                    <td>₹0 for the first year then ₹23.6/Month</td>
+                    <td>₹ 300 per year</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <!-- Brokerage Charges -->
+    <div class="brokerage">
+        <h2>Brokerage Charges</h2>
+        <div class="AccountOpeningandMaintenanceChargestable">
+
+            <table>
+                <tr>
+                    <th>Brokerage Charges</th>
+                    <th>Angel One</th>
+                    <th>Zerodha</th>
+                </tr>
+                <tr>
+                    <td>Intraday</td>
+                    <td>₹ 20 or 0.25% (Whichever is lower)</td>
+                    <td>₹ 20 or 0.03% / executed order whichever is lower</td>
+                </tr>
+                <tr>
+                    <td>Futures</td>
+                    <td>₹ 20 or 0.25% (Whichever is lower)</td>
+                    <td>₹ 20 or 0.03% / executed order whichever is lower</td>
+                </tr>
+                <tr>
+                    <td>Options</td>
+                    <td>₹ 20 or 0.25% (Whichever is lower)</td>
+                    <td>₹ 20 per executed order (on Turnover)</td>
+                </tr>
+                <tr>
+                    <td>Delivery</td>
+                    <td>Zero</td>
+                    <td>Zero</td>
+                </tr>
+            </table>
+        </div>
+            <!-- brokerage compare -->
+             <div class="brokeragecompare">
+                <h2>Brokerage Charges</h2>
+                <section class="brokerage-charges">
+                
+                    <div class="charges-container">
+                        <div class="charge-item">
+                            <div class="charge-left">
+                                <img src="/static/Assets/AngleOne.png" alt="Angel One">
+                                <div class="charge-value">23.6</div>
+                            </div>
+                            <p class="charge-label">Auto Square Off</p>
+                            <div class="charge-right">
+                                <img src="/static/Assets/zerodha-logo.png" alt="Zerodha">
+                                <div class="charge-value">59</div>
+                            </div>
+                            
+                        </div>
+                        <div class="charge-item">
+                            <div class="charge-left">
+                                <img src="/static/Assets/AngleOne.png" alt="Angel One">
+                                <div class="charge-value">20</div>
+                            </div>
+                            <p class="charge-label">Call & Trade</p>
+                            <div class="charge-right">
+                                <img src="/static/Assets/zerodha-logo.png" alt="Zerodha">
+                                <div class="charge-value">50</div>
+                            </div>
+                           
+                        </div>
+                        <div class="charge-item">
+                            <div class="charge-left">
+                                <img src="/static/Assets/AngleOne.png" alt="Angel One">
+                                <div class="charge-value">15.34</div>
+                            </div>
+                            <p class="charge-label">DP Charges</p>
+                            <div class="charge-right">
+                                <img src="/static/Assets/zerodha-logo.png" alt="Zerodha">
+                                <div class="charge-value">15.93</div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </section>
+             </div>
+            
+    <!-- complaints graph -->
+    <div class="Complaints_graph" id="complaints">
+        <h2>Complaints</h2>
+        <div class="chart-container">
+            <canvas id="complaintsChart"></canvas>
+        </div>
+
+    </div>
+    <!-- Share Holding graph Angle one -->
+    <div class="shareholdingAngleOne" id="ShareHolding">
+        <h2>Share Holding - Angel One</h2>
+        <div class="chart-container">
+            <canvas id="shareHoldingAngelOne"></canvas>
+        </div>
+
+    </div>
+    <!-- Share Holding graph Zerodha -->
+    <div class="shareholdingZerodha">
+        <h2>Share Holding - Zerodha</h2>
+        <div class="chart-container">
+            <canvas id="shareHoldingZerodha"></canvas>
+        </div>
+
+    </div>
+
+    <div class="prosandcons" id="Prosandcons">
+        <h2>Pros & Cons</h2>
+        <!-- for angle one -->
+        <div class="pros-cons-container">
+            <table class="pros-cons-table">
+                <thead>
+                    <tr>
+                        <th class="pros-header">Pros</th>
+                        <th class="logo-cell"><img src="/static/Assets/AngleOne.png" alt="Logo"></th>
+                        <th class="cons-header">Cons</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="icon thumbup"><img src="/static/Assets/Thumbs up.png" alt="Thumbs up"></span>Angel One
+                            charges zero account opening charges as well as zero annual maintenance charges for only the
+                            first year.</td>
+                        <td></td>
+                        <td><span class="icon thumbdown"><img src="/static/Assets/Thumbs down.png" alt="Thumbs down"></span>Call
+                            and trade fee is charged at an extra Rs 20 per executed order.</td>
+                    </tr>
+                    <tr>
+                        <td><span class="icon thumbup"><img src="/static/Assets/Thumbs up.png" alt="Thumbs up"></span>Zero
+                            brokerage charges for equity delivery and remaining segments like intraday and F&O which is
+                            flat Rs. 20 per trade.</td>
+                        <td></td>
+                        <td><span class="icon thumbdown"><img src="/static/Assets/Thumbs down.png" alt="Thumbs down"></span>User
+                            Interface is a bit complex as it is not for beginners.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- for Zerodha -->
+        <div class="pros-cons-container">
+            <table class="pros-cons-table">
+                <thead>
+                    <tr>
+                        <th class="pros-header">Pros</th>
+                        <th class="logo-cell"><img src="/static/Assets/zerodha-logo.png" alt="Logo"></th>
+                        <th class="cons-header">Cons</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="icon thumbup"><img src="/static/Assets/Thumbs up.png" alt="Thumbs up"></span>You don't
+                            pay any brokerage when you buy shares using cash-and-carry (CNC). Delivery trade has no
+                            leverage. Once bought, shares get delivered to your demat account and if sold, shares will
+                            get debited from your demat account.</td>
+                        <td></td>
+                        <td><span class="icon thumbdown"><img src="/static/Assets/Thumbs down.png"
+                                    alt="Thumbs down"></span>Doesn't provide stock tips, research reports or
+                            recommendations.</td>
+                    </tr>
+                    <tr>
+                        <td><span class="icon thumbup"><img src="/static/Assets/Thumbs up.png" alt="Thumbs up"></span>They offer
+                            services under a simple pricing model. They charge 0.03% or Rs 20 per executed order,
+                            whichever is lower, regardless of the trade size. The maximum brokerage paid by the customer
+                            is Rs 20 per trade.</td>
+                        <td></td>
+                        <td><span class="icon thumbdown"><img src="/static/Assets/Thumbs down.png"
+                                    alt="Thumbs down"></span>Lifetime free AMC demat account plans are not available.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span class="icon thumbup"><img src="/static/Assets/Thumbs up.png" alt="Thumbs up"></span>Zerodha is
+                            a self-clearing broker. They don't charge clearing charges from customers</td>
+                        <td></td>
+                        <td><span class="icon thumbdown"><img src="/static/Assets/Thumbs down.png" alt="Thumbs down"></span>An
+                            additional charge of Rs 50 per executed order for MIS/BO/CO positions which are not square
+                            off by the customer.</td>
+                    </tr>
+                    <tr>
+                        <td><span class="icon thumbup"><img src="/static/Assets/Thumbs up.png" alt="Thumbs up"></span>Set
+                            long-standing stop loss and target orders for your stock investments.</td>
+                        <td></td>
+                        <td><span class="icon thumbdown"><img src="/static/Assets/Thumbs down.png" alt="Thumbs down"></span>Call
+                            & Trade is available at an additional fee of Rs 50 per executed order.</td>
+                    </tr>
+                    <tr>
+                        <td><span class="icon thumbup"><img src="/static/Assets/Thumbs up.png" alt="Thumbs up"></span>An all-new
+                            mobile app built for both, passive investors and active day traders, with significant speed
+                            and user experience enhancements.</td>
+                        <td></td>
+                        <td><span class="icon thumbdown"><img src="/static/Assets/Thumbs down.png"
+                                    alt="Thumbs down"></span>3-in-1 trading account is not available as Zerodha doesn't
+                            provide banking services.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+    <!-- Ratings -->
+    <div class="ratings-section" id="Ratings">
+        <h2 class="ratings-title">Ratings</h2>
+        <div class="ratings-container">
+            <div class="rating-card">
+                <img src="/static/Assets/AngleOne.png" alt="Angel One Logo" class="rating-logo">
+                <div class="rating-stars">
+                    <span>★★★★☆</span>
+                </div>
+                <h3 class="broker-name">Angel One</h3>
+                <div class="rating-score">4.7</div>
+                <ul class="rating-details">
+                    <li>Trust Factor <span class="stars">★★★★★</span></li>
+                    <li>Ease of Use <span class="stars">★★★☆☆</span></li>
+                    <li>Technology <span class="stars">★★★★☆</span></li>
+                </ul>
+                <a href="#" class="open-account-btn">Open Demat Account</a>
+            </div>
+            <div class="rating-card">
+                <img src="/static/Assets/zerodha-logo.png" alt="Zerodha Logo" class="rating-logo">
+                <div class="rating-stars">
+                    <span>★★★★☆</span>
+                </div>
+                <h3 class="broker-name">Zerodha</h3>
+                <div class="rating-score">4.6</div>
+                <ul class="rating-details">
+                    <li>Trust Factor <span class="stars">★★★★★</span></li>
+                    <li>Ease of Use <span class="stars">★★★★☆</span></li>
+                    <li>Technology <span class="stars">★★★★☆</span></li>
+                </ul>
+                <a href="#" class="open-account-btn">Open Demat Account</a>
+            </div>
+        </div>
+    </div>
+    <!-- financials graph -->
+    <div class="financials" id="financials">
+        <h2>Financials</h2>
+        <div class="chart-container">
+            <canvas id="financialsChart"></canvas>
+        </div>
+    </div>
+    <script>
+        function toggleMenu() {
+            const navbarMenu = document.getElementById('navbarMenu');
+            navbarMenu.classList.toggle('active');
+        }
+    </script>
+
+</body>
+<script src="/static/component3.js"></script>
+
+</html>

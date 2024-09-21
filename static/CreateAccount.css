@@ -1,0 +1,50 @@
+body {
+    background-color: #f7f9fc;
+}
+
+.card {
+    border-radius: 8px;
+}
+
+.logo-container {
+    display: inline-flex; /* Aligns items horizontally */
+    align-items: center;  /* Centers items vertically */
+    justify-content: center; /* Centers the container horizontally */
+    gap: 8px; /* Space between the logo and text */
+}
+
+.logo {
+    max-height: 36px;
+    line-height: 1;
+}
+
+.brand-text {
+    font-family: 'Arial', sans-serif;
+    font-size: 38px;  /* Adjust font size as needed */
+    color: #080808;   /* Match the color with the theme */
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+.btn-primary {
+    background-color: #1a73e8;
+    border: none;
+}
+
+.btn-outline-primary {
+    color: #1a73e8;
+    border-color: #1a73e8;
+}
+
+.btn-outline-primary:hover {
+    background-color: #1a73e8;
+    color: #fff;
+}
+
+a {
+    color: #1a73e8;
+}
+
+a:hover {
+    text-decoration: underline;
+}
