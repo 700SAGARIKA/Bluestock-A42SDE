@@ -326,7 +326,7 @@
                 <li> <a href="#">IPO</a></li>
                 <li> <a href="#">COMMUNITY</a></li>
                 <li> <a href="#">PRODUCTS</a></li>
-                <li> <a href="#">BROKERS <i style="rotate: 41.19deg;" class="fa-solid fa-arrow-up"></i></a></li>
+                <li> <a href="{% url 'BrokersCompare' %}">BROKERS <i style="rotate: 41.19deg;" class="fa-solid fa-arrow-up"></i></a></li>
                 <li> <a href="#">LIVE NEWS</a></li>
                 <button><a href="#">Sign In</a></button>
                 <button><a href="#">Sign Up Now</a></button>
@@ -426,7 +426,7 @@
                 border-image-source: linear-gradient(180deg, #D9D9D9 0%, rgba(32, 29, 31, 0) 100%); 
                 border-image-slice: 1;
                 margin-top: 1.2em; margin-bottom: 1.2em;">
-            <a href="#" style="color: blue; margin-left: 190px;">View Details >></a>
+            <a href="{% url 'TechnicalAnalysis' %}" style="color: blue; margin-left: 190px;">View Details >></a>
         </div>
         <div class="card">
             <img src="/static/images/derivatives.png">

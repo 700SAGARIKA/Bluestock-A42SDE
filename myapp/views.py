@@ -6,12 +6,11 @@ def home(request):
     return render(request,"email.html")
 
 def login(request):
-    #print("Hieeeeee")
     if request.method == 'POST':
-        #print(request.POST) 
+       
         username = request.POST['username']
         password = request.POST['Password']  
-        #print(f"Username: {username}, Password: {password}") 
+       
         user_login = auth.authenticate(username=username, password=password)
 
         if user_login is not None:
@@ -53,3 +52,6 @@ def CreateAccount(request):
          return render(request,"CreateAccount.html")
 def ForgotPassword(request):
     return render(request,"ForgotPassword.html")
+
+def IPO_Registration(request):
+    return render(request,"IPO_Registration.html")

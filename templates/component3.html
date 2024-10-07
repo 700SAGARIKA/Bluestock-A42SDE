@@ -18,7 +18,7 @@
         </div>
         <div class="menu-icon" onclick="toggleMenu()">&#x2630;</div> <!-- Hamburger icon -->
         <ul class="navbar-menu" id="navbarMenu">
-            <li><a href="#">PRODUCTS</a></li>
+            <li><a href="{% url 'products' %}">PRODUCTS</a></li>
             <li><a href="#">COMMUNITY</a></li>
             <li class="dropdown">
                 <a href="#">MEDIA</a>
@@ -28,7 +28,7 @@
                 </div>
             </li>
             <li class="dropdown">
-                <a href="#">BROKERS</a>
+                <a href="{% url 'BrokersCompare' %}">BROKERS</a>
                 <div class="dropdown-content">
                     <a href="#">Submenu 1</a>
                     <a href="#">Submenu 2</a>

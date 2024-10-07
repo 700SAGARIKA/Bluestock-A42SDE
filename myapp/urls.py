@@ -8,5 +8,6 @@ urlpatterns= [
     path("BrokersCompare" , views.BrokersCompare , name = "BrokersCompare"),
     path("TechnicalAnalysis" , views.TechnicalAnalysis , name = "TechnicalAnalysis"),
     path("CreateAccount" , views.CreateAccount , name = "CreateAccount"),
-    path("ForgotPassword" , views.ForgotPassword , name = "ForgotPassword")
+    path("ForgotPassword" , views.ForgotPassword , name = "ForgotPassword"),
+    path("IPO_Registration" , views.IPO_Registration , name = "IPO_Registration")
 ]
